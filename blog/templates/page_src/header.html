@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+{% block content %}
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-header ">
+			<!--<span>
+			<img src=" {% static 'images/author.png' %} " width="10px" class="img-circle">
+			</span>-->
+			<a class="navbar-brand" href="#"><span>
+			<img src=" {% static 'images/author.png' %} " width="25px" class="img-circle">
+			</span>The Blog</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right" style="position:relative; right:10px;">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="#contact">contact</a></li>	
+		</ul>
+	</nav>
+	
+	<!--<ul class="nav nav-tabs">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="blog.html">Blog</a></li>
+		<li><a href="contact.html">Contact us</a></li>
+	</ul>-->
+{% endblock %}

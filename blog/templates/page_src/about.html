@@ -1,0 +1,87 @@
+{% extends "page_src/template/main.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+	{% include "page_src/header.html" %}
+	{% include "page_src/template/quickcontact.html" %}
+
+	<div class="container-fluid" style="margin: 0;">
+		
+	<div class="stripcontainer" style="background-color:grey; height:80vh;">
+		<h1 class="contact-heading text-center"style="padding:60px 0 0 0;margin:0;">
+			Who are we?</h1>
+		<div class="container" style="padding:40px 0 0 0;">
+			<h2>The Blogs</h2>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph.<br>
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph.<br></p>
+		</div>
+	</div>
+		<div class="contact-heading" style="width:27%;margin:0;">
+			<h1>Team profiles</h1>
+		</div>
+	<div class="stripcontainer" style="padding:20px 0 0 0;height:60vh;background-color:lightblue;">
+		<div class="container text-right">
+			<span>
+			<img src=" {% static 'images/User.png' %} " width="200px" class="img-circle">
+			</span>
+			<h2>Name</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,<br>
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,<br>
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,<br>
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph.<br>
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,<br>
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph.</p>
+		</div>
+	</div>
+	
+	<div class="stripcontainer" style="background-color:yellow;height:60vh;">
+		<div class="container"><span>
+			<img src=" {% static 'images/User.png' %} " width="200px" class="img-circle">
+			</span>
+			<h2>Name</h2>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph.<br>
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph,
+				I'm paragraph,I'm paragraph,I'm paragraph,I'm paragraph.<br></p>
+		</div>
+	</div>		
+			
+		<!-- contact -->
+		<a name="contact"></a>:
+		<div class="stripcontainer" style="background-color:grey;height:70vh;">
+					<h1 class="contact-heading text-center">Contact us</h1>
+		
+				<form class="contact-form" method='post'>
+					{% csrf_token %}
+					<div class="textfields">
+					<span class="far fa-envelope" aria-hidden="true"></span>
+					{{ form.email }}
+					</div>
+					<div class="textfields">
+					<span class="fa fa-user" aria-hidden="true"></span>	
+					{{ form.name }}
+					</div>
+					<div class="textfields">
+					<span class="fa fa-user" aria-hidden="true"></span>
+					{{ form.subject }}
+					</div>	
+					<div class="textfields">
+					{{ form.body }}
+					</div>
+			<div class="textfields text-center" style="border-bottom: 5px solid #4caf50;">
+						<button type="submit">send</button>
+					</div>
+				</form>
+		</div>
+	</div>	
+{% endblock %}

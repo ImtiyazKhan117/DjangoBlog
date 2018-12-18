@@ -1,0 +1,28 @@
+{% extends "page_src/template/main.html" %}
+
+{% block content %}
+
+	{% include "page_src/header.html" %}
+	{% include "page_src/template/quickcontact.html" %}
+
+	<div class="container" style="padding-top:10%;">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h2>Title: {{ post.title }}</h2>
+			<p class="text-sm"> On {{ post.date|date:"Y-m-d" }} </p>
+ 		</div>
+			<div class="panel-body">
+				<h6> {{ post.body|safe|linebreaks }} </h6>
+				<br>
+				<img src="{{ post.image.url }}" width="200px">
+			</div>
+			<div class="panel-footer">
+				<h5 class="text-right">By {{ post.name }} </h5>
+			</div>
+		  </div>
+		<div class="text-right">
+		<a class="btn btn-default" href="blog.html">Back to Blog</a>
+		</div>
+	</div>
+
+{% endblock %}

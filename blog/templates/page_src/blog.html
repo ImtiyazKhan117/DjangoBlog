@@ -1,0 +1,60 @@
+{% extends "page_src/template/main.html" %}
+
+{% block content %}
+
+{% include "page_src/header.html" %}
+
+{% include "page_src/template/quickcontact.html" %}
+<div class="container-fluid">
+<div class="stripcontainer" style="background-color:grey;padding-top:10%;height:50vh;">
+	<h1 class="text-center"> Blogs </h1>
+</div>
+	<h1 class="text-center text-lg" style="color:white;" >Posts</h1>
+		{% for post in object_list %}
+		<div class="col-sm-6 col-sm-offset-3">
+			<div class="panel panel-info">
+				<!-- panel-head -->
+				<div class="panel-heading">
+					<h5>on {{ post.date|date:"Y-m-d" }} </h5>
+				</div>
+				<!--panel-body-->
+				<div class="panel-body">
+					<h5>Title:</h5>
+					<h3>
+					<a href="/blog/{{ post.id }}"> {{ post.title }} </a></h3>
+				</div>
+				<!--panel-footer -->				
+				<div class="panel-footer">
+					<p class="text-right">by {{ post.name }} </p>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+		<!-- contact -->	
+		<!--<a name="contact"></a>:
+		<div class="stripcontainer" style="background-color:grey;">
+			<h1 class="text-center">Contact us</h1>
+				<form class="contact-form" method='post'>
+					{% csrf_token %}
+					<div class="textfields">
+					<span class="fa fa-user" aria-hidden="true"></span>
+					{{ form.email }}
+					</div>
+					<div class="textfields">
+					<span class="fa fa-user" aria-hidden="true"></span>	
+					{{ form.name }}
+					</div>
+					<div class="textfields">
+					<span class="fa fa-user" aria-hidden="true"></span>
+					{{ form.subject }}
+					</div>
+					<div class="textfields">
+					{{ form.body }}
+					</div>
+					<button type="submit">send</button>
+				</form>	
+		</div>
+	</div>-->
+</div>
+	
+{% endblock %}
