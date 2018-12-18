@@ -52,4 +52,8 @@ these installation is done by assuming you already have installed python3.x in y
   ## Final step
   #### run the following commands in you terminal/cmd to make migration for database
   ### commands:
-  #### &emsp;&emsp;&emsp;&emsp;
+  #### &emsp;&emsp;&emsp;&emsp; python manage.py makemigrations
+  #### &emsp;&emsp;&emsp;&emsp; python manage.py migrate
+  ## now Run the server
+  #### &emsp;&emsp;&emsp;&emsp; python manage.py runserver
+  ## This template is created by Imtiyaz
