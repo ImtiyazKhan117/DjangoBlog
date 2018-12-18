@@ -48,7 +48,12 @@ these installation is done by assuming you already have installed python3.x in y
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;url(r'^admin/', include(admin.site.urls)),<br/>
 	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;url(r'^blog/',include('blog.urls'))<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)<br/>
-  
+  ## step03 Django Admin setup
+  #### If you already have django super-user then you can escape this part.<br/>
+  ### commands for setting up super-user
+  #### &emsp;&emsp;&emsp;&emsp; python manage.py createsuperuser
+  #### put the user-name,e-mail,password
+  ### Note: super user is requird becuase of posting and managing forms
   ## Final step
   #### run the following commands in you terminal/cmd to make migration for database
   ### commands:
